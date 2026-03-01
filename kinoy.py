@@ -24,18 +24,9 @@ from aiogram.types import (
 )
 from aiogram.client.default import DefaultBotProperties
 
-# ----------------- LOGGING -----------------
-
-logging.basicConfig(
-    level=logging.ERROR,  # faqat xatolar
-    format="%(asctime)s - %(levelname)s - %(message)s"
-)
-
-logger = logging.getLogger("kino_serial_bot")
-
-# aiogram va aiohttp loglarini ham ERROR darajaga tushiramiz
-logging.getLogger("aiogram").setLevel(logging.ERROR)
-logging.getLogger("aiohttp").setLevel(logging.ERROR)
+# --------------------- LOGGING ---------------------
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("kino_full_bot")
 
 # ----------------- KONFIG -----------------
 BOT_TOKEN = os.getenv("BOT_TOKEN", "8522754363:AAFH-PpaLUciTXS8IfWj2_zjqIbSs20K9Tg")
